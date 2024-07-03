@@ -2,8 +2,6 @@ package com.challenge.conta_azul.http.controllers;
 
 import com.challenge.conta_azul.domain.services.MarsService;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +15,9 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import static org.mockito.Mockito.when;
 
-@RunWith(SpringRunner.class)
+import org.junit.jupiter.api.Test;
+
+// @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
 public class RobotControllerTest {

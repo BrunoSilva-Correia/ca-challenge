@@ -1,16 +1,16 @@
 package com.challenge.conta_azul.domain.repositories;
 
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class GridRepositoryTest {
 
   private GridRepository gridRepository;
 
-  @Before
+  @BeforeEach
   public void setUp() {
     gridRepository = new GridRepository(5, 5);
   }

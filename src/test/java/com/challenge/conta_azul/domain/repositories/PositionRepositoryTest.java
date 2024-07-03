@@ -1,17 +1,18 @@
 package com.challenge.conta_azul.domain.repositories;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 import com.challenge.conta_azul.domain.entities.PositionEntity;
 import com.challenge.conta_azul.domain.enums.DirectionEnum;
-import org.junit.Before;
-import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
 
 public class PositionRepositoryTest {
 
   private PositionRepository positionRepository;
 
-  @Before
+  @BeforeEach
   public void setUp() {
     positionRepository = new PositionRepository();
   }

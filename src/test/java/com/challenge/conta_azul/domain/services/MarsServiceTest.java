@@ -1,15 +1,16 @@
 package com.challenge.conta_azul.domain.services;
 
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class MarsServiceTest {
 
   private MarsService marsService;
 
-  @Before
+  @BeforeEach
   public void setUp() {
     marsService = new MarsService();
   }
@@ -26,14 +27,18 @@ public class MarsServiceTest {
     assertEquals("(0, 0, E)", result);
   }
 
-  @Test(expected = IllegalArgumentException.class)
+  @Test
   public void testInvalidCommand() {
-    marsService.executeCommands("AAA");
+    assertThrows(IllegalArgumentException.class, () -> {
+      marsService.executeCommands("AAA");
+    });
   }
 
-  @Test(expected = IllegalArgumentException.class)
+  @Test
   public void testInvalidMovementOutsideGrid() {
-    marsService.executeCommands("MMMMMMMMMM");
+    assertThrows(IllegalArgumentException.class, () -> {
+      marsService.executeCommands("MMMMMMMMMM");
+    });
   }
 
 }
